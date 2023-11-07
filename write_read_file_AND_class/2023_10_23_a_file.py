@@ -147,3 +147,30 @@ myFile.close()
 # Decodifico il contenuto in una stringa
 decoded_content = "".join(chr(byte) for byte in content)
 print(decoded_content)
+
+
+
+
+
+#CREARE UN FILE CSV SCRIVERLO E LEGGERLO:
+
+fileCsv = open("fileNames.csv", "w")    # Apro il file in modalità scrittura ("w") o lo creo se non esiste
+
+fileCsv.write("Francesco\n")
+fileCsv.write("Riccardo\n")
+fileCsv.write("Simone\n")
+fileCsv.write("Davide\n")
+fileCsv.write("Federico\n")
+fileCsv.write("Giuseppe\n")
+
+fileCsv.close()
+
+
+
+fileCsv = open("fileNames.csv", "r")      # Riapro il file in modalità lettura ("r")
+
+
+for name in fileCsv:
+    print(name.strip())     # Utilizzo strip() per rimuovere il carattere di nuova riga
+    
+fileCsv.close()
